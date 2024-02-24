@@ -2,8 +2,9 @@
 # CNN+双向GRU+attention
 #import tensorflow as tf
 
-import tensorflow.compat.v1 as tf
-tf.disable_v2_behavior()
+import tensorflow.compat.v1 as tf  # 使用了 TensorFlow 1.x 的兼容模式（tensorflow.compat.v1），这允许您在 TensorFlow 2.x 环境中使用 TensorFlow 1.x 的功能。
+# 这样做的目的可能是为了保持代码的兼容性，或者是因为某些功能在 TensorFlow 1.x 中更为成熟或者更适合您的需求。
+tf.disable_v2_behavior() # 禁用 TensorFlow 2.x 的某些特性和行为，并尽可能地模拟 TensorFlow 1.x 的行为，以便您可以在 TensorFlow 2.x 环境中使用 TensorFlow 1.x 的代码。
 def weight_variables(shape):
     """偏置"""
     w=tf.Variable(tf.random_normal(shape=shape,mean=0.0,stddev=1.0))
